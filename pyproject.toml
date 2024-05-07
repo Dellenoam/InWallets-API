@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "InWallets-API"
+version = "0.1.0"
+description = ""
+authors = ["Dellenoam"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.110.0"
+asyncclick = "^8.1.7.2"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+pydantic-settings = "^2.2.1"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.29"}
+alembic = "^1.13.1"
+asyncpg = "^0.29.0"
+pydantic = {extras = ["email"], version = "^2.6.4"}
+pyjwt = {extras = ["crypto"], version = "^2.8.0"}
+bcrypt = "^4.1.2"
+celery = "^5.3.6"
+flower = "^2.0.1"
+itsdangerous = "^2.1.2"
+openpyxl = "^3.1.2"
+python-multipart = "^0.0.9"
+web3 = "^6.16.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
