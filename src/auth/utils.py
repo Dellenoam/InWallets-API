@@ -15,11 +15,11 @@ def encode_jwt(
 
 def decode_jwt(
     token: str | bytes,
-    private_key: str = settings.crypto.PUBLIC_KEY_PATH.read_text(),
+    publick_key: str = settings.crypto.PUBLIC_KEY_PATH.read_text(),
     algorithm: str = settings.crypto.ALGORITHM,
 ) -> Dict[str, Any] | None:
     try:
-        return jwt.decode(token, private_key, algorithms=[algorithm])
+        return jwt.decode(token, publick_key, algorithms=[algorithm])
     except (jwt.DecodeError, jwt.ExpiredSignatureError):
         return None
 
